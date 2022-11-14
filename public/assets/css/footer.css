@@ -1,0 +1,13 @@
+footer {
+    background-color: #267DFF;
+    color: white;
+   justify-content: center!important;
+    border-top: solid;
+    border-color: #1a202c;
+    border-width: 1px;
+}
+
+footer>p {
+    font-size: 12px;
+    font-weight: bold;
+}
