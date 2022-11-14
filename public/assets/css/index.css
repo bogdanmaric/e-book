@@ -1,0 +1,8 @@
+.books {
+    border: solid;
+}
+
+.book {
+    border: solid;
+    border-radius: 20px;
+}
