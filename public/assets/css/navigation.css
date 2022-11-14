@@ -1,0 +1,40 @@
+.right-menu a, .right-menu>p {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    border-bottom: solid;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.right-menu {
+    display: flex;
+}
+
+#user-name {
+    background-color: #005E99;
+    border: solid;
+    border-radius: 20px;
+
+}
+
+.navbar-brand {
+    margin-left: 2rem;
+}
+
+.right-menu > a:hover {
+    margin-right: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: deepskyblue;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+nav {
+    background-color: #267DFF;
+    border-bottom: solid;
+    border-color: #1a202c;
+    border-width: 1px;
+}
