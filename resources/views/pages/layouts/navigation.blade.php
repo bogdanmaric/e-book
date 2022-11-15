@@ -5,6 +5,6 @@
     </a>
 
     <div class="right-menu">
-        <a href="#"><span><img id="cart-image" style="width: 32px" src="{{asset("assets/images/cart-64.png")}}"></span></a>
+        <a href="#"><span><img id="cart-image" src="{{asset("assets/images/cart-64.png")}}"></span></a>
     </div>
 </nav>

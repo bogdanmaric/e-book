@@ -32,3 +32,7 @@ nav {
     transition: all 0.5s;
     transform: rotate(360deg);
 }
+
+#cart-image {
+    width: 32px;
+}
