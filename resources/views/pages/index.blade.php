@@ -8,9 +8,25 @@
 
 @section("main")
     <div class="container">
-        <div class="row books">
+        <div class="row books jus text-center justify-content-center">
         @foreach ($books as $book)
-            <div class="col-12 col-md-4">
+                <div class="book card col-12 col-md-4 p-3 m-5">
+                    <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$book->title}}</h5>
+                        <p class="card-text">{{$book->description}}</p>
+                        <form action="">
+                            <button href="#" class="btn btn-primary">
+                                <span>
+                                <img style="width: 32px" src="{{asset("assets/images/cart-64.png")}}">
+                                </span>
+                                Dodaj u korpu
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+{{--            <div class="col-12 col-md-4">
                 <div class="m-4 book">
                 <p>{{$book->title}}</p>
                 <p>{{$book->description}}</p>
@@ -20,7 +36,7 @@
                 <p>{{$book->price}}</p>
                 <p>{{$book->category->name}}</p>
                 </div>
-            </div>
+            </div>--}}
         @endforeach
         </div>
     </div>
