@@ -5,8 +5,6 @@
     </a>
 
     <div class="right-menu">
-        <a href="#">Registruj se</a>
-        <a href="#">Prijavi se</a>
-        <p class="mb-0" id="user-name">Posetilac</p>
+        <a href="#"><span><img id="cart-image" style="width: 32px" src="{{asset("assets/images/cart-64.png")}}"></span></a>
     </div>
 </nav>
