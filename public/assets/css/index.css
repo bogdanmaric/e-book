@@ -1,8 +1,15 @@
 .books {
-    border: solid;
+    borsder: solid;
+    bosrder-color: white;
 }
 
 .book {
     border: solid;
     border-radius: 20px;
+    width: 18rem;
+}
+
+.book-simage {
+    width: 10rem;
+    height: 12rem;
 }
