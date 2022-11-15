@@ -9,7 +9,10 @@
     width: 18rem;
 }
 
-.book-simage {
-    width: 10rem;
-    height: 12rem;
+.book-image {
+    border-radius: 20px;
+}
+
+.book-cart {
+    width: 32px;
 }

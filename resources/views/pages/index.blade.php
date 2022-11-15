@@ -18,7 +18,7 @@
                         <form action="">
                             <button href="#" class="btn btn-primary">
                                 <span>
-                                <img style="width: 32px" src="{{asset("assets/images/cart-64.png")}}">
+                                <img class="book-cart" src="{{asset("assets/images/cart-64.png")}}">
                                 </span>
                                 Dodaj u korpu
                             </button>
