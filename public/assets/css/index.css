@@ -5,8 +5,16 @@
 
 .book {
     border: solid;
+    border-color: #e5e5e5;
     border-radius: 20px;
     width: 18rem;
+    transition: all 0.5s;
+}
+
+.book:hover {
+    border-color: deeppink;
+    transform: scale(1.1,1.1);
+    transition: all 0.5s;
 }
 
 .book-image {
