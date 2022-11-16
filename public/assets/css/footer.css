@@ -7,7 +7,7 @@ footer {
     border-width: 1px;
 }
 
-footer>p {
+#copyright {
     font-size: 12px;
     font-weight: bold;
 }
