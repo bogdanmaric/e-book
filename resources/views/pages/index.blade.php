@@ -12,9 +12,11 @@
         @foreach ($books as $book)
                 <div class="book card col-12 col-md-4 p-3 m-5">
                     <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$book->title}}</h5>
-                        <p class="card-text">{{$book->description}}</p>
+                    <div class="card-body book-body">
+                        <h5 class="card-title book-title">{{$book->title}}</h5>
+                        <p class="card-text book-text">{{$book->description}}</p>
+                        <small class="card-category book-category">{{$book->category->name}}</small>
+                        <hr>
                         <form action="">
                             <button href="#" class="btn btn-primary">
                                 <span>
