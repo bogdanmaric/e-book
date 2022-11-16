@@ -16,7 +16,6 @@
 </head>
 <body>
 @include("pages.layouts.navigation")
-<div><h1>E-book</h1></div>
 
 @yield("main")
 
