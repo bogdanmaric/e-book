@@ -21,6 +21,15 @@
     border-radius: 20px;
 }
 
+.book-category {
+    border: solid 1px white;
+    border-radius: 20px;
+    background-color: #EAEEFF;
+    csolor: white;
+    display: inline;
+    padding: 0.2rem 0.4rem;
+}
+
 .book-cart {
     width: 32px;
 }
