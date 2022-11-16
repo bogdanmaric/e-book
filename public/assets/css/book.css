@@ -1,0 +1,25 @@
+.c{border: solid;}
+.book {
+    borsder: solid;
+    /*border-color: #e5e5e5;*/
+    /*border-radius: 20px;*/
+    /*width: 18rem;*/
+    /*transition: all 0.5s;*/
+}
+
+.book-image {
+    border-radius: 20px;
+    width: 20rem;
+}
+
+.book-category {
+    border: solid 1px white;
+    border-radius: 20px;
+    background-color: #EAEEFF;
+    display: inline;
+    padding: 0.2rem 0.4rem;
+}
+
+.book-cart {
+    width: 32px;
+}
