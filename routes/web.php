@@ -17,4 +17,5 @@ Route::get('/', function () {
     return redirect("/ebook");
 });
 
+Route::get("/admin", [App\Http\Controllers\BookControllerR::class, "adminPageShow"]);
 Route::resource("/ebook", App\Http\Controllers\BookControllerR::class);
