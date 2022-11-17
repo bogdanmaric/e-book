@@ -15,7 +15,6 @@
                     <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
                     <div class="card-body book-body">
                         <h5 class="card-title book-title">{{$book->title}}</h5>
-                        <p class="card-text book-text">{{$book->description}}</p>
                         <small class="card-category book-category">{{$book->category->name}}</small>
                         <hr>
                         <form action="">
