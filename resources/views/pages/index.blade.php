@@ -12,6 +12,9 @@
         @foreach ($books as $book)
                 <div class="book card col-12 col-md-4 p-3 m-5">
                     <a style="text-decoration: none; color: black;" href="{{route("ebook.show", $book->id)}}">
+                    <div class="d-flex justify-content-center div-author-publisher">
+                        <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
+                    </div>
                     <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
                     <div class="card-body book-body">
                         <h5 class="card-title book-title">{{$book->title}}</h5>
