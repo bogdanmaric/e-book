@@ -13,6 +13,14 @@
     <title>@yield("title")</title>
     @yield("style")
     @yield("js")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <Style>
+        html, body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </Style>
 </head>
 <body>
 @include("pages.layouts.navigation")
