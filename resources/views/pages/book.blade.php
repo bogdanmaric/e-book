@@ -26,6 +26,9 @@
                     <p class="card-text book-text">{{$book->description}}</p>
                     <small class="card-category book-category">{{$book->category->name}}</small>
                     <hr>
+                    <div class="d-flex justify-content-center div-author-publisher">
+                        <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
+                    </div>
                 </div>
             </div>
         </div>
