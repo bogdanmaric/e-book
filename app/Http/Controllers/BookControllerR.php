@@ -84,4 +84,26 @@ class BookControllerR extends Controller
     {
         //
     }
+
+    /**
+     * Page for admin login
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function adminPageShow(Request $request)
+    {
+        return view("pages.admin");
+    }
+
+    /**
+     * Admin login
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function adminLogIn(Request $request)
+    {
+        return view("pages.admin");
+    }
 }
