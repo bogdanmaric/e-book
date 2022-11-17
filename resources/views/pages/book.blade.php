@@ -9,8 +9,16 @@
 @section("main")
     <div class="container mb">
         <div class="row book mt-4 justify-content-center">
-            <div class="col-4 d-flex justify-content-center p-3">
+            <div class="col-4 d-flex flex-column align-items-center p-3">
                 <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
+                <form  class="mt-3" action="">
+                    <button href="#" class="btn btn-primary">
+                                <span>
+                                <img class="book-cart" src="{{asset("assets/images/cart-64.png")}}">
+                                </span>
+                        Dodaj u korpu
+                    </button>
+                </form>
             </div>
             <div class="row justify-content-center mb-5">
                 <div class="card-body book-body col px-3">
@@ -18,14 +26,6 @@
                     <p class="card-text book-text">{{$book->description}}</p>
                     <small class="card-category book-category">{{$book->category->name}}</small>
                     <hr>
-                    <form action="">
-                        <button href="#" class="btn btn-primary">
-                                <span>
-                                <img class="book-cart" src="{{asset("assets/images/cart-64.png")}}">
-                                </span>
-                            Dodaj u korpu
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
