@@ -13,7 +13,7 @@ nav {
     display: flex;
 }
 
-.right-menu a {
+#cart{
     margin-right: 2rem;
     text-decoration: none;
     color: white;
@@ -21,11 +21,52 @@ nav {
     border-bottom: solid;
     transition: all 0.5s;
     font-size: 14px;
-    background-color: deepskyblue;
     border-radius: 10px;
+    background-color: deepskyblue;
 }
 
-.right-menu > a:hover {
+#add-book {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    border-bottom: solid;
+    transition: all 0.5s;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: deepskyblue;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#logout {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    border-bottom: solid;
+    transition: all 0.5s;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: deepskyblue;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#logout > a {
+    text-decoration: none;
+    color: white;
+}
+
+#cart-image {
+    width: 32px;
+}
+
+#cart:hover {
     text-decoration: none;
     color: white;
     border-radius: 20px;
@@ -33,6 +74,16 @@ nav {
     transform: rotate(360deg);
 }
 
-#cart-image {
-    width: 32px;
+#add-book:hover {
+    color: white;
+    border-radius: 20px;
+    transition: all 0.5s;
+    background-color: #D56EE7;
+}
+
+#logout:hover {
+    color: white;
+    border-radius: 20px;
+    transition: all 0.5s;
+    background-color: #F23560;
 }
