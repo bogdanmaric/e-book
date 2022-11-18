@@ -10,6 +10,9 @@
     <div class="container mb">
         <div class="row book mt-4 justify-content-center">
             <div class="col-4 d-flex flex-column align-items-center p-3">
+                <div class="d-flex justify-content-center div-author-publisher">
+                    <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
+                </div>
                 <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
                 <form  class="mt-3" action="">
                     <button href="#" class="btn btn-primary">
@@ -26,9 +29,6 @@
                     <p class="card-text book-text">{{$book->description}}</p>
                     <small class="card-category book-category">{{$book->category->name}}</small>
                     <hr>
-                    <div class="d-flex justify-content-center div-author-publisher">
-                        <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
-                    </div>
                 </div>
             </div>
         </div>
