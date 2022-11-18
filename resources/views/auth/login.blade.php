@@ -1,15 +1,18 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            <a class="navbar-brand" href="{{url("/")}}">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="{{asset("assets/images/ebook.png")}}" width="50" height="50" class="align-top" alt="">
+                    <p style="font-size: 25px;">E-Book Prodavnica Administrator</p>
+                </div>
             </a>
         </x-slot>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('admin') }}">
             @csrf
 
             <!-- Email Address -->
