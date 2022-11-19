@@ -9,7 +9,12 @@
         @if (Auth::check())
             <div id="add-book">
                 <a href="#">Dodaj Knjigu</a>
-                <img src="{{asset("assets/images/plus-sign.png")}}" width="30" height="30" class="d-inline-block align-top" alt="">
+                <img style="margin-left: 2px;" src="{{asset("assets/images/plus-sign.png")}}" width="25" height="25" class="d-inline-block align-top" alt="">
+            </div>
+
+            <div id="add-book">
+                <a href="#">Kategorije</a>
+                <img style="margin-left: 2px;" src="{{asset("assets/images/list.png")}}" width="22" height="22" class="d-inline-block align-top" alt="">
             </div>
 
             <div id="logout">
@@ -19,10 +24,8 @@
                     onclick="event.preventDefault();
                     this.closest('form').submit();">Odjava</a>
                 </form>
-                <img src="{{asset("assets/images/power.png")}}" width="30" height="30" class="d-inline-block align-top" alt="">
+                <img style="margin-left: 2px;" src="{{asset("assets/images/power.png")}}" width="25" height="25" class="d-inline-block align-top" alt="">
             </div>
         @endif
-
-
     </div>
 </nav>
