@@ -34,11 +34,17 @@ nav {
     transition: all 0.5s;
     font-size: 14px;
     border-radius: 10px;
-    background-color: deepskyblue;
+    background-color: #0c5470;
+    align-items: center;
 
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+}
+
+#add-book a {
+    text-decoration: none;
+    color: white;
 }
 
 #logout {
@@ -50,14 +56,15 @@ nav {
     transition: all 0.5s;
     font-size: 14px;
     border-radius: 10px;
-    background-color: deepskyblue;
+    background-color: #0c5470;
+    align-items: center;
 
     display: flex;
     flex-wrap: wrap;
     align-content: center;
 }
 
-#logout > a {
+#logout a {
     text-decoration: none;
     color: white;
 }
@@ -78,12 +85,12 @@ nav {
     color: white;
     border-radius: 20px;
     transition: all 0.5s;
-    background-color: #D56EE7;
+    background-color: rgba(12, 84, 112, 0.6);
 }
 
 #logout:hover {
     color: white;
     border-radius: 20px;
     transition: all 0.5s;
-    background-color: #F23560;
+    background-color: rgba(12, 84, 112, 0.6);
 }
