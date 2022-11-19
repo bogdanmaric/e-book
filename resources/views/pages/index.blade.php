@@ -11,6 +11,13 @@
         <div class="row books text-center justify-content-center">
         @foreach ($books as $book)
                 <div class="book card col-12 col-md-4 p-3 m-5">
+                    @if (Auth::check())
+                        <div class="d-flex justify-content-around">
+                            <a class="btn btn-danger" href="#">Delete</a>
+                            <a class="btn btn-warning" href="#">Edit</a>
+                        </div>
+                        <hr>
+                    @endif
                     <a style="text-decoration: none; color: black;" href="{{route("ebook.show", $book->id)}}">
                     <div class="d-flex justify-content-center div-author-publisher">
                         <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
