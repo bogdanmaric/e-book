@@ -7,7 +7,7 @@
     <div class="right-menu">
         <a href="#" id="cart"><span><img id="cart-image" src="{{asset("assets/images/cart-64.png")}}"></span></a>
         @if (Auth::check())
-                <a id="add-book" class="d-flex align-items-center" href="#">
+                <a href="{{route("ebook.create")}}" class="d-flex align-items-center" id="add-book">
                     Dodaj Knjigu
                     <img style="margin-left: 2px;" src="{{asset("assets/images/plus-sign.png")}}" width="25" height="25" class="d-inline-block align-top" alt="">
                 </a>
