@@ -25,7 +25,7 @@ class BookControllerR extends Controller
      */
     public function create()
     {
-        //
+        return view("pages.add-book");
     }
 
     /**
