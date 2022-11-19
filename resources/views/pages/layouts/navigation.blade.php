@@ -7,15 +7,15 @@
     <div class="right-menu">
         <a href="#" id="cart"><span><img id="cart-image" src="{{asset("assets/images/cart-64.png")}}"></span></a>
         @if (Auth::check())
-            <div id="add-book">
-                <a href="#">Dodaj Knjigu</a>
-                <img style="margin-left: 2px;" src="{{asset("assets/images/plus-sign.png")}}" width="25" height="25" class="d-inline-block align-top" alt="">
-            </div>
+                <a id="add-book" class="d-flex align-items-center" href="#">
+                    Dodaj Knjigu
+                    <img style="margin-left: 2px;" src="{{asset("assets/images/plus-sign.png")}}" width="25" height="25" class="d-inline-block align-top" alt="">
+                </a>
 
-            <div id="add-book">
-                <a href="#">Kategorije</a>
+            <a id="add-book" class="d-flex align-items-center" href="#">
+                Kategorije
                 <img style="margin-left: 2px;" src="{{asset("assets/images/list.png")}}" width="22" height="22" class="d-inline-block align-top" alt="">
-            </div>
+            </a>
 
             <div id="logout">
                 <form method="POST" action="{{ route('logout') }}">

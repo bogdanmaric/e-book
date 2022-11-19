@@ -36,10 +36,6 @@ nav {
     border-radius: 10px;
     background-color: #0c5470;
     align-items: center;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
 }
 
 #add-book a {
@@ -62,6 +58,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    cursor: pointer;
 }
 
 #logout a {
