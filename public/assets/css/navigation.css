@@ -104,7 +104,7 @@ nav {
 #add-book:hover {
     color: white;
     border-radius: 20px;
-    transition: all 2s;
+    transition: border-radius 0.5s;
 }
 
 #add-book:hover img {
@@ -113,11 +113,15 @@ nav {
     animation-iteration-count: infinite;
 }
 
+#add-book:active {
+    border: 3px solid white;
+}
+
 
 #category:hover {
     color: white;
     border-radius: 20px;
-    transition: all 0.5s;
+    transition: border-radius 0.5s;
 }
 
 #category:hover img {
@@ -126,11 +130,15 @@ nav {
     animation-iteration-count: infinite;
 }
 
+#category:active {
+    border: 3px solid white;
+}
+
 
 #logout:hover {
     color: white;
     border-radius: 20px;
-    transition: all 0.5s;
+    transition: border-radius 0.5s;
 }
 
 #logout:hover img {
@@ -139,6 +147,9 @@ nav {
     animation-iteration-count: infinite;
 }
 
+#logout:active {
+    border: 3px solid white;
+}
 
 
 @keyframes hover-rotate {
