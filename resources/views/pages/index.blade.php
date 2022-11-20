@@ -16,9 +16,13 @@
                             <form action="{{action("\App\Http\Controllers\BookControllerR@destroy", [$book->id])}}" method="post">
                                 @csrf
                                 @method("DELETE")
-                                <button class="btn btn-danger" href="#">Delete</button>
+                                <button class="btn btn-danger">Delete</button>
                             </form>
-                            <a class="btn btn-warning" href="#">Edit</a>
+                            <form action="{{action("\App\Http\Controllers\BookControllerR@update", [$book->id])}}" method="post">
+                                @csrf
+                                @method("PUT")
+                                <button class="btn btn-warning">Edit</button>
+                            </form>
                         </div>
                         <hr>
                     @endif
