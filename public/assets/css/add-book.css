@@ -1,0 +1,14 @@
+#form-wrapper {
+    margin-top: 3rem;
+    width: 60%;
+}
+
+#page-title{
+    text-align: center;
+}
+
+#add-book-form {
+    border: solid;
+    padding: 20px;
+    border-radius: 20px;
+}
