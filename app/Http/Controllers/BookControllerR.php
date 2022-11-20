@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class BookControllerR extends Controller
@@ -25,7 +26,8 @@ class BookControllerR extends Controller
      */
     public function create()
     {
-        return view("pages.add-book");
+        $categories = Category::all();
+        return view("pages.add-book", compact("categories"));
     }
 
     /**
