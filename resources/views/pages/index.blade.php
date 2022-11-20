@@ -13,7 +13,11 @@
                 <div class="book card col-12 col-md-4 p-3 m-5">
                     @if (Auth::check())
                         <div class="d-flex justify-content-around">
-                            <a class="btn btn-danger" href="#">Delete</a>
+                            <form action="{{action("\App\Http\Controllers\BookControllerR@destroy", [$book->id])}}" method="post">
+                                @csrf
+                                @method("DELETE")
+                                <button class="btn btn-danger" href="#">Delete</button>
+                            </form>
                             <a class="btn btn-warning" href="#">Edit</a>
                         </div>
                         <hr>
