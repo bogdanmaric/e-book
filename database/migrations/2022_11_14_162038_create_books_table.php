@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string("description", 200);
             $table->string("author", 30);
             $table->string("publisher", 40);
-            $table->string("link", 255);
+            $table->string("image_link", 255);
+            $table->string("book_link", 255);
             $table->unsignedInteger("price");
             $table->unsignedBigInteger("category_id");
             $table->timestamps();
