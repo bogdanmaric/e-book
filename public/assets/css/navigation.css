@@ -25,6 +25,11 @@ nav {
     background-color: deepskyblue;
 }
 
+#cart-image {
+    width: 32px;
+}
+
+
 #add-book {
     margin-right: 2rem;
     text-decoration: none;
@@ -39,6 +44,24 @@ nav {
 }
 
 #add-book a {
+    text-decoration: none;
+    color: white;
+}
+
+#category {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    border-bottom: solid;
+    transition: all 0.5s;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #0c5470;
+    align-items: center;
+}
+
+#category a {
     text-decoration: none;
     color: white;
 }
@@ -66,9 +89,8 @@ nav {
     color: white;
 }
 
-#cart-image {
-    width: 32px;
-}
+
+
 
 #cart:hover {
     text-decoration: none;
@@ -78,16 +100,63 @@ nav {
     transform: rotate(360deg);
 }
 
+
 #add-book:hover {
     color: white;
     border-radius: 20px;
-    transition: all 0.5s;
-    background-color: rgba(12, 84, 112, 0.6);
+    transition: all 2s;
 }
+
+#add-book:hover img {
+    animation-name: hover-rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+
+#category:hover {
+    color: white;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+#category:hover img {
+    animation-name: hover-rotateX;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
 
 #logout:hover {
     color: white;
     border-radius: 20px;
     transition: all 0.5s;
-    background-color: rgba(12, 84, 112, 0.6);
+}
+
+#logout:hover img {
+    animation-name: hover-rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes hover-rotate {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hover-rotateX {
+    from{
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg);
+    }
 }
