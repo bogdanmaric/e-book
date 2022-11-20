@@ -18,7 +18,7 @@
                         </div>
                         <hr>
                     @endif
-                    <a style="text-decoration: none; color: black;" href="{{route("ebook.show", $book->id)}}">
+                    <a class="book-clickable" href="{{route("ebook.show", $book->id)}}">
                     <div class="d-flex justify-content-center div-author-publisher">
                         <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
                     </div>
