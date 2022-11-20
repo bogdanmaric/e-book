@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Category;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 
 class BookControllerR extends Controller
@@ -38,7 +39,18 @@ class BookControllerR extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $book = new Book();
+        $book->title = $request->title;
+        $book->description = $request->description;
+        $book->image_link = $request->image_link;
+        $book->book_link = $request->book_link;
+        $book->author = $request->author;
+        $book->publisher = $request->publisher;
+        $book->category_id = $request->category_id;
+        $book->price = $request->price;
+        $book->save();
+
+        return redirect(RouteServiceProvider::HOME)->with("Uspešno dodata knjiga u katalog radnje");
     }
 
     /**
