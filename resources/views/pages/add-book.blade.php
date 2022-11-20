@@ -3,14 +3,14 @@
 @section("title", "E-book")
 
 @section("style")
-    <link rel="stylesheet" href="{{asset("assets/css/index.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/add-book.css")}}">
 @endsection
 
 @section("main")
 <div class="h-100 d-flex align-items-center justify-content-center">
-    <div class="" style="margin-top: 3rem; width: 60%;">
-        <h1 style="text-align: center;">Dodavanje knjige</h1>
-        <form method="POST"  style="border: solid; padding: 20px; border-radius: 20px;">
+    <div id="form-wrapper">
+        <h1 id="page-title">Dodavanje knjige</h1>
+        <form id="add-book-form" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Naslov</label>
