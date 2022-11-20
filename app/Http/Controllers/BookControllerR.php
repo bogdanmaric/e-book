@@ -85,7 +85,7 @@ class BookControllerR extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        var_dump("update");die();
     }
 
     /**
@@ -96,7 +96,9 @@ class BookControllerR extends Controller
      */
     public function destroy($id)
     {
-        //
+        $book = Book::find($id);
+        $book->delete();
+        return redirect(RouteServiceProvider::HOME)->with("status", "Knjiga je uspešno obrisana iz kataloga");
     }
 
     /**
