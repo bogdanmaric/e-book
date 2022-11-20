@@ -11,6 +11,11 @@
     transition: all 0.5s;
 }
 
+.book-clickable {
+    text-decoration: none;
+    color: black;
+}
+
 .book:hover {
     border-color: deeppink;
     transform: scale(1.1,1.1);
