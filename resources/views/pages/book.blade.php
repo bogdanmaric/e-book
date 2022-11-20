@@ -10,6 +10,21 @@
     <div class="container mb">
         <div class="row book mt-4 justify-content-center">
             <div class="col-4 d-flex flex-column align-items-center p-3">
+                @if (Auth::check())
+                    <div class="d-flex">
+                        <form id="delete-form" action="{{action("\App\Http\Controllers\BookControllerR@destroy", [$book->id])}}" method="post">
+                            @csrf
+                            @method("DELETE")
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                        <form id="update-form" action="{{action("\App\Http\Controllers\BookControllerR@update", [$book->id])}}" method="post">
+                            @csrf
+                            @method("PUT")
+                            <button class="btn btn-warning">Edit</button>
+                        </form>
+                    </div>
+                    <hr>
+                @endif
                 <div class="d-flex justify-content-center div-author-publisher">
                     <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
                 </div>
