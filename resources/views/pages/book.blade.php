@@ -13,7 +13,7 @@
                 <div class="d-flex justify-content-center div-author-publisher">
                     <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
                 </div>
-                <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
+                <img class="card-img-top book-image" src="{{$book->image_link}}" alt="book-image" >
                 <form  class="mt-3" action="">
                     <button href="#" class="btn btn-primary">
                                 <span>

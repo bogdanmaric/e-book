@@ -22,7 +22,7 @@
                     <div class="d-flex justify-content-center div-author-publisher">
                         <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
                     </div>
-                    <img class="card-img-top book-image" src="{{asset("assets/images/cover.jpg")}}" alt="book-image">
+                    <img class="card-img-top book-image" src="{{$book->image_link}}" alt="book-image">
                     <div class="card-body book-body">
                         <h5 class="card-title book-title">{{$book->title}}</h5>
                         <small class="card-category book-category">{{$book->category->name}}</small>
