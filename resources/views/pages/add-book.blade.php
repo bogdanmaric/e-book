@@ -24,11 +24,11 @@
             </div>
             <div class="form-group">
                 <label for="image-link">Link slike</label>
-                <input name="image-link" type="text" class="form-control" id="image-link" placeholder="Link slike koji će biti prikazana na knjizi" required>
+                <input name="image_link" type="text" class="form-control" id="image-link" placeholder="Link slike koji će biti prikazana na knjizi" required>
             </div>
             <div class="form-group">
                 <label for="book-link">Link knjige</label>
-                <input name="book-link" type="text" class="form-control" id="book-link"
+                <input name="book_link" type="text" class="form-control" id="book-link"
                        placeholder="Link knjige koji će bit poslat na mejl kupca" required>
             </div>
             <div class="form-row">
