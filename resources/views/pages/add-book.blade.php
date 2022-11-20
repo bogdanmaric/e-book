@@ -14,41 +14,43 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Naslov</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Naslov knjige (max: 50 karaktera)" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Opis</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Opis knjige (max: 200 karaktera)" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputAddress">Link slike</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Link slike koji će biti prikazana na knjizi" required>
             </div>
             <div class="form-group">
                 <label for="inputAddress2">Link knjige</label>
                 <input type="text" class="form-control" id="inputAddress2"
-                       placeholder="Apartment, studio, or floor">
+                       placeholder="Link knjige koji će bit poslat na mejl kupca" required>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">Autor</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Autor knjige (max: 30 karaktera)" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputCity">Izdavač</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Izdavač knjige (max: 40 karaktera)" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">Kategorija</label>
                     <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                        @foreach($categories as $category)
+                            <option>{{$category->name}}</option>
+                        @endforeach
+
                     </select>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputZip">Cena</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" class="form-control" id="inputZip" required>
                 </div>
             </div>
             <hr>
