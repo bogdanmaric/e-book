@@ -50,8 +50,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="cena">Cena</label>
-                    <input name="cena" type="number" class="form-control" id="cena" required>
+                    <label for="price">Cena</label>
+                    <input name="price" type="number" class="form-control" id="price" required>
                 </div>
             </div>
             <hr>
