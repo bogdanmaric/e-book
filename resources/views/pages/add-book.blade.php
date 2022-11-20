@@ -10,7 +10,8 @@
 <div class="h-100 d-flex align-items-center justify-content-center mb-5">
     <div id="form-wrapper">
         <h1 id="page-title">Dodavanje knjige</h1>
-        <form id="add-book-form" method="POST">
+        <form id="add-book-form" method="POST" action="{{action("\App\Http\Controllers\BookControllerR@store")}}">
+            @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="title">Naslov</label>
