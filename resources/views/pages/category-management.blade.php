@@ -7,7 +7,7 @@
 @endsection
 
 @section("js")
-    <script src="{{asset("assets/js/category_manage.js")}}"></script>
+    <script src="{{asset("assets/js/category_management.js")}}"></script>
 @endsection
 
 @section("main")
