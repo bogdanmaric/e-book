@@ -11,9 +11,9 @@
         <div id="form-wrapper">
             <h1 id="page-title">Ažuriranje knjige</h1>
             <form id="add-book-form" method="POST"
-                  action="{{action("\App\Http\Controllers\BookControllerR@edit", [$book->id])}}">
+                  action="{{action("\App\Http\Controllers\BookControllerR@update", [$book->id])}}">
                 @csrf
-                @method("EDIT")
+                @method("PUT")
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="title">Naslov</label>
