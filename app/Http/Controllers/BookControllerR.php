@@ -87,7 +87,19 @@ class BookControllerR extends Controller
      */
     public function update(Request $request, $id)
     {
-        var_dump("update");die();
+        $book = new Book();
+        $book = Book::find($id);
+        $book->title = $request->title;
+        $book->description = $request->description;
+        $book->image_link = $request->image_link;
+        $book->book_link = $request->book_link;
+        $book->author = $request->author;
+        $book->publisher = $request->publisher;
+        $book->category_id = $request->category_id;
+        $book->price = $request->price;
+        $book->save();
+
+        return redirect(RouteServiceProvider::HOME)->with("Uspešno promenjene informacije o knjizi");
     }
 
     /**
