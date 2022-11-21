@@ -73,7 +73,9 @@ class BookControllerR extends Controller
      */
     public function edit($id)
     {
-        //
+        $book = Book::find($id);
+        $categories = Category::all();
+        return view("pages.update-book", compact("book", "categories"));
     }
 
     /**
