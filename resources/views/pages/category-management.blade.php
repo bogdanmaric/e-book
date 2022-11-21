@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="{{asset("assets/css/category-management.css")}}">
 @endsection
 
+@section("js")
+    <script src="{{asset("assets/js/category_manage.js")}}"></script>
+@endsection
+
 @section("main")
     <table class="table mt-5">
         <thead class="thead-dark">
