@@ -16,12 +16,12 @@
                             <form action="{{action("\App\Http\Controllers\BookControllerR@destroy", [$book->id])}}" method="post">
                                 @csrf
                                 @method("DELETE")
-                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-danger">Izbrši</button>
                             </form>
-                            <form action="{{action("\App\Http\Controllers\BookControllerR@update", [$book->id])}}" method="post">
+                            <form action="{{action("\App\Http\Controllers\BookControllerR@edit", [$book->id])}}" method="post">
                                 @csrf
-                                @method("PUT")
-                                <button class="btn btn-warning">Edit</button>
+                                @method("GET")
+                                <input type="submit"value="Ažuriraj" class="btn btn-warning">
                             </form>
                         </div>
                         <hr>
