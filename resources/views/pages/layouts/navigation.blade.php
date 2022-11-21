@@ -12,7 +12,7 @@
                     <img style="margin-left: 2px;" src="{{asset("assets/images/plus-sign.png")}}" width="25" height="25" class="d-inline-block align-top" alt="">
                 </a>
 
-            <a id="category" class="d-flex align-items-center" href="#">
+            <a id="category" class="d-flex align-items-center" href="{{route("category.index")}}">
                 Kategorije
                 <img style="margin-left: 2px;" src="{{asset("assets/images/list.png")}}" width="22" height="22" class="d-inline-block align-top" alt="">
             </a>
