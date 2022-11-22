@@ -21,7 +21,7 @@
                             <form action="{{action("\App\Http\Controllers\BookControllerR@edit", [$book->id])}}" method="post">
                                 @csrf
                                 @method("GET")
-                                <input type="submit"value="Ažuriraj" class="btn btn-warning">
+                                <input type="submit"value="Izmeni" class="btn btn-warning">
                             </form>
                         </div>
                         <hr>
