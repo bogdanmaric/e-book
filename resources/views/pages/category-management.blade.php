@@ -33,28 +33,28 @@
         </thead>
         <tbody>
         @foreach($categories as $category)
-        <tr>
-            <td>{{$category->name}}</td>
-            <td>
-                <form class="change-category"
-                       action="{{ action("\App\Http\Controllers\CategoryControllerR@update", [$category->id]) }}"
-                       method="post">
-                    <input type="text" name = "category_name" placeholder="Novi naziv kategorije" required>
-                    @csrf
-                    @method("PUT")
-                    <input class="btn btn-warning" type="submit" value="Izmeni">
-                </form>
-            </td>
-            <td>
-                <form class="delete-category"
-                      action="{{ action("\App\Http\Controllers\CategoryControllerR@destroy", [$category->id]) }}"
-                      method="post">
-                    @csrf
-                    @method("DELETE")
-                    <input class="btn btn-danger" type="submit" value="Izbriši">
-                </form>
-            </td>
-        </tr>
+            <tr>
+                <td class="category-name">{{$category->name}}</td>
+                <td>
+                    <form class="change-category"
+                          action="{{route("category.update", $category->id)}}"
+                          method="post">
+                        <input type="text" name="category_name" placeholder="Novi naziv kategorije" required>
+                        @csrf
+                        @method("PUT")
+                        <input class="btn btn-warning" type="submit" value="Izmeni">
+                    </form>
+                </td>
+                <td>
+                    <form class="delete-category"
+                          action="{{route("category.destroy", $category->id)}}"
+                          method="post">
+                        @csrf
+                        @method("DELETE")
+                        <input class="btn btn-danger" type="submit" value="Izbriši">
+                    </form>
+                </td>
+            </tr>
         @endforeach
         </tbody>
     </table>
