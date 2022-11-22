@@ -1,23 +1,22 @@
 $(function () {
 
-    $(".promena-kategorije").submit(function (e) {
+    $(".change-category").submit(function (e) {
         e.preventDefault();
 
         var form = $(this);
         var url = form.attr("action");
-        var method = form.attr("method");
         var data = form.serialize();
 
         $.ajax({
             url: url,
-            method: method,
+            method: "PUT",
             data: {
                 data,
                 _token: $("form input[name='_token']").val(),
-                _method: $("form input[name='_method']").val(),
             },
             "success": function (odgovor) {
-                form.parent().parent().find("#naziv_kategorije").text(odgovor["promenjena_kategorija"]);
+                console.log(odgovor);
+                form.parent().parent().find(".category-name").text(odgovor["changed_category"]);
                 form.find("input[name='category_name']").val("");
             },
             "error": function (odgovor) {
