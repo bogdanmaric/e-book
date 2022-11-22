@@ -73,7 +73,12 @@ class CategoryControllerR extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = [];
+        parse_str($request->data, $data);
+        $category = Category::find($id);
+        $category->name = $data["category_name"];
+        $category->save();
+        return response()->json(["msg" => "ok", "changed_category" => $category->name]);
     }
 
     /**
