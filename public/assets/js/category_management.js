@@ -5,17 +5,18 @@ $(function () {
 
         var form = $(this);
         var url = form.attr("action");
+        var method = form.attr("method");
         var data = form.serialize();
 
         $.ajax({
             url: url,
-            method: "PUT",
+            method: method,
             data: {
                 data,
                 _token: $("form input[name='_token']").val(),
+                _method: form.children("input[name='_method']").val()
             },
             "success": function (odgovor) {
-                console.log(odgovor);
                 form.parent().parent().find(".category-name").text(odgovor["changed_category"]);
                 form.find("input[name='category_name']").val("");
             },
