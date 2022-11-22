@@ -26,7 +26,7 @@ $(function () {
     });
 
 
-    $(".brisanje-kategorije").submit(function (e) {
+    $(".delete-category").submit(function (e) {
         e.preventDefault();
 
         var form = $(this);
