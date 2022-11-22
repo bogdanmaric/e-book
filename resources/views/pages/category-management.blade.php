@@ -15,13 +15,14 @@
         <thead class="thead-dark">
         <tr>
             <th scope="row" colspan="3">
-                    <form class="kreiranje-kategorije"
-                          action="{{ action("\App\Http\Controllers\CategoryControllerR@store") }}"
-                          method="post">
-                        @csrf
-                        <input type="text" name="category_name" placeholder="Naziv kategorije" required>
-                        <input class="btn btn-primary" type="submit" value="Kreiraj novu kategoriju">
-                    </form>
+                <form class="create-category"
+                      action="{{route("category.store")}}"
+                      method="post">
+                    @csrf
+                    @method("POST")
+                    <input type="text" name="category_name" placeholder="Naziv kategorije" required>
+                    <input class="btn btn-primary" type="submit" value="Kreiraj novu kategoriju">
+                </form>
             </th>
         </tr>
         <tr>
