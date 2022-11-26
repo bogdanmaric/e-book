@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Category;
 use App\Providers\RouteServiceProvider;
+use App\Services\CartService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class BookControllerR extends Controller
 {
@@ -116,24 +118,15 @@ class BookControllerR extends Controller
     }
 
     /**
-     * Page for admin login
+     * Adds book to the cart
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function adminPageShow(Request $request)
+    public function addBookToCart(Request $request, $id)
     {
-        return view("pages.admin");
-    }
-
-    /**
-     * Admin login
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function adminLogIn(Request $request)
-    {
-        return view("pages.admin");
+        var_dump("add book to the cart");
+        die();
     }
 }
