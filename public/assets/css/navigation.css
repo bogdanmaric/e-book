@@ -6,7 +6,15 @@ nav {
 }
 
 .navbar-brand {
+    padding: 0 30px;
     margin-left: 2rem;
+    outline: solid rgba(0,0,0,0);
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.navbar-brand:hover {
+    outline: solid rgba(255,255,255,1);
+    transition: all 0.5s;
 }
 
 .right-menu {
