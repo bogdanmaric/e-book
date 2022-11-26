@@ -35,6 +35,7 @@
                         <h5 class="card-title book-title">{{$book->title}}</h5>
                         <small class="card-category book-category">{{$book->category->name}}</small>
                         <hr>
+                        @if(!Session::get("cart", $book->id))
                         <form action="{{route("addBookToCart", [$book->id])}}" method="post">
                             @csrf
                             @method("POST")
@@ -45,6 +46,9 @@
                                 Dodaj u korpu
                             </button>
                         </form>
+                        @else
+                            <p>Knjiga se već nalazi u korpi</p>
+                        @endif
                     </div>
                     </a>
                 </div>
