@@ -18,9 +18,11 @@ Route::get('/', function () {
     return redirect("/ebook");
 });
 
-Route::get("/ebook/cart", ["App\Http\Controllers\CartController","index"])->name("cart");
-Route::resource("/ebook/category", App\Http\Controllers\CategoryControllerR::class);
-Route::resource("/ebook", App\Http\Controllers\BookControllerR::class);
-Route::post("/ebook/{id}", ["App\Http\Controllers\BookControllerR","addBookToCart"])->name("addBookToCart");
+Route::middleware("cart.created")->group(function (){
+    Route::get("/ebook/cart", ["App\Http\Controllers\CartController","index"])->name("cart");
+    Route::resource("/ebook/category", App\Http\Controllers\CategoryControllerR::class);
+    Route::resource("/ebook", App\Http\Controllers\BookControllerR::class);
+    Route::post("/ebook/{id}", ["App\Http\Controllers\BookControllerR","addBookToCart"])->name("addBookToCart");
+});
 
 require __DIR__.'/auth.php';
