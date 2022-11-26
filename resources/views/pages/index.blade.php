@@ -35,8 +35,10 @@
                         <h5 class="card-title book-title">{{$book->title}}</h5>
                         <small class="card-category book-category">{{$book->category->name}}</small>
                         <hr>
-                        <form action="">
-                            <button href="#" class="btn btn-primary">
+                        <form action="{{route("addBookToCart", [$book->id])}}" method="post">
+                            @csrf
+                            @method("POST")
+                            <button class="btn btn-primary">
                                 <span>
                                 <img class="book-cart" src="{{asset("assets/images/cart-64.png")}}">
                                 </span>
