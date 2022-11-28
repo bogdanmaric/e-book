@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::middleware("cart.created")->group(function (){
     Route::get("/ebook/cart", ["App\Http\Controllers\CartController","index"])->name("cart");
+    Route::delete("/ebook/cart/{id}", ["App\Http\Controllers\CartController","removeBookFromCart"])->name("removeBookFromCart");
     Route::resource("/ebook/category", App\Http\Controllers\CategoryControllerR::class);
     Route::resource("/ebook", App\Http\Controllers\BookControllerR::class);
     Route::post("/ebook/{id}", ["App\Http\Controllers\BookControllerR","addBookToCart"])->name("addBookToCart");
