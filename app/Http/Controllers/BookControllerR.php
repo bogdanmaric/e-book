@@ -126,7 +126,7 @@ class BookControllerR extends Controller
      */
     public function addBookToCart(Request $request, $id)
     {
-        Session::put("cart", $id);
+        $request->session()->get("cart")->put($id, $id);
         return redirect(RouteServiceProvider::HOME)->with("status", "Knjiga je uspešno dodata u korpu");
     }
 }
