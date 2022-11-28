@@ -122,17 +122,4 @@ class BookControllerR extends Controller
         $book->delete();
         return redirect(RouteServiceProvider::HOME)->with("status", "Knjiga je uspešno obrisana iz kataloga");
     }
-
-    /**
-     * Adds book to the cart
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function addBookToCart(Request $request, $id)
-    {
-        $request->session()->get("cart")->put($id, $id);
-        return redirect(RouteServiceProvider::HOME)->with("status", "Knjiga je uspešno dodata u korpu");
-    }
 }
