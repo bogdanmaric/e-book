@@ -42,7 +42,7 @@
                     {{$book->price}}
                 </td>
                 <td class="align-middle text-center">
-                    <form action="$" method="post">
+                    <form action="{{route("removeBookFromCart", $book->id)}}" method="post">
                         @csrf
                         @method("DELETE")
                         <button class="btn btn-danger">Ukloni iz korpe</button>
