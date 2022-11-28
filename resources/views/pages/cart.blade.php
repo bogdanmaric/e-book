@@ -7,14 +7,14 @@
 @endsection
 
 @section("main")
-{{--    @if($cart->isEmpty())--}}
-{{--        <div class="col">--}}
-{{--            <p id="text-prazna-korpa" class="text-center mt-5">Vaša korpa je prazna</p>--}}
-{{--        </div>--}}
-{{--        <div class="col text-center mt-5">--}}
-{{--            <img id="slika-prazna-korpa" class="book-cart mt-5" src="{{asset("assets/images/cart-empty.png")}}">--}}
-{{--        </div>--}}
-{{--    @else--}}
+    @if($books->isEmpty())
+        <div class="col">
+            <p id="text-prazna-korpa" class="text-center mt-5">Vaša korpa je prazna</p>
+        </div>
+        <div class="col text-center mt-5">
+            <img id="slika-prazna-korpa" class="book-cart mt-5" src="{{asset("assets/images/cart-empty.png")}}">
+        </div>
+    @else
     <table class="table table-bordered mt-5">
         <thead>
         <tr>
@@ -50,5 +50,5 @@
         @endforeach
         </tbody>
     </table>
-{{--    @endif--}}
+    @endif
 @endsection
