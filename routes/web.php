@@ -25,5 +25,6 @@ Route::middleware("cart.created")->group(function (){
     Route::resource("/ebook/category", App\Http\Controllers\CategoryControllerR::class);
     Route::resource("/ebook", App\Http\Controllers\BookControllerR::class);
 });
+Route::post("ebook/cart/send-email", ["App\Http\Controllers\CartController","purchaseBook"])->name("purchaseBook");
 
 require __DIR__.'/auth.php';
