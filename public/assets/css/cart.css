@@ -18,3 +18,10 @@
         transform: rotateY(360deg);
     }
 }
+
+
+
+.image-link {
+    border: solid;
+    border-radius: 20px;
+}
