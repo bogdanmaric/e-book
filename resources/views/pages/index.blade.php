@@ -35,7 +35,7 @@
                         <h5 class="card-title book-title">{{$book->title}}</h5>
                         <small class="card-category book-category">{{$book->category->name}}</small>
                         <hr>
-                        @if(!Session::get("cart", $book->id))
+                        @if(!Session::get("cart")->has($book->id))
                         <form action="{{route("addBookToCart", [$book->id])}}" method="post">
                             @csrf
                             @method("POST")
