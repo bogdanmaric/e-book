@@ -26,20 +26,22 @@
         <tbody>
         @foreach($books as $book)
             <tr>
-                <th scope="row" class="d-flex justisfy-content-around">
-                    <div class="d-flex flex-row">
-                        <img class="image-link" width="200" src="{{$book->image_link}}">
-                        <p>Naslov: {{$book->title}}</p>
-                        <p>Autor: {{$book->author}}</p>
-                        <p>Izdavač: {{$book->publisher}}</p>
+                <th scope="row" class="d-flex justify-content-around">
+                    <div class="d-flex flex-row row">
+                        <div class="col">
+                            <img class="image-link" width="200" src="{{$book->image_link}}">
+                        </div>
+                        <div class="col d-flex flex-column">
+                            <p>Naslov: {{$book->title}}</p>
+                            <p>Autor: {{$book->author}}</p>
+                            <p>Izdavač: {{$book->publisher}}</p>
+                        </div>
                     </div>
                 </th>
-                <td>
-                    <div class="text-center">
-                        {{$book->price}}
-                    </div>
+                <td class="align-middle text-center">
+                    {{$book->price}}
                 </td>
-                <td>
+                <td class="align-middle text-center">
                     <form action="$" method="post">
                         @csrf
                         @method("DELETE")
