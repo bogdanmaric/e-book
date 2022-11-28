@@ -6,6 +6,8 @@ use App\Models\Book;
 use App\Models\Category;
 use App\Providers\RouteServiceProvider;
 use App\Services\CartService;
+use App\Services\ImageUrlValidation;
+use http\Env\Url;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -36,7 +38,7 @@ class BookControllerR extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -44,7 +46,11 @@ class BookControllerR extends Controller
         $book = new Book();
         $book->title = $request->title;
         $book->description = $request->description;
-        $book->image_link = $request->image_link;
+        $book->image_link = (
+        ImageUrlValidation::imageUrlValidation($request->image_link))
+            ? $request->image_link
+            : asset("assets/images/image_not_available.png"
+        );
         $book->book_link = $request->book_link;
         $book->author = $request->author;
         $book->publisher = $request->publisher;
@@ -58,7 +64,7 @@ class BookControllerR extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -70,7 +76,7 @@ class BookControllerR extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -83,8 +89,8 @@ class BookControllerR extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -107,7 +113,7 @@ class BookControllerR extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -120,8 +126,8 @@ class BookControllerR extends Controller
     /**
      * Adds book to the cart
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function addBookToCart(Request $request, $id)
