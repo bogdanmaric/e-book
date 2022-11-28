@@ -52,17 +52,18 @@
         @endforeach
         <tr>
             <td colspan="3" class="justify-content-center">
-                <form id="buy-book-form" classs="d-flex" method="POST" action="#">
+                <form id="buy-book-form" classs="d-flex" method="POST" action="{{route("purchaseBook")}}">
                     <h4>Unesite vaše podatke za kreiranje porudzbine</h4>
                     @csrf
+                    @method("POST")
                     <div class="col-sm-6">
                         <div class="col">
                             <label for="name">Ime</label>
                             <input name="name" type="text" class="form-control" id="name" placeholder="Unesite vaše ime" required>
                         </div>
                         <div class="col">
-                            <label for="mail">Mejl</label>
-                            <input name="mail" type="text" class="form-control" id="mail" placeholder="Unesite vaš mejl" required>
+                            <label for="email">Imejl</label>
+                            <input name="email" type="text" class="form-control" id="email" placeholder="Unesite vaš imejl" required>
                             <hr>
                         </div>
                     </div>
