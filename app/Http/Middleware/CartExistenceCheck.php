@@ -17,7 +17,7 @@ class CartExistenceCheck
     public function handle(Request $request, Closure $next)
     {
         if (!(session()->has("cart"))) {
-            session()->put("cart", array());
+            session()->put("cart", collect(array()));
         }
         return $next($request);
     }
