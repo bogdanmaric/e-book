@@ -50,6 +50,28 @@
                 </td>
             </tr>
         @endforeach
+        <tr>
+            <td colspan="3" class="justify-content-center">
+                <form id="buy-book-form" classs="d-flex" method="POST" action="#">
+                    <h4>Unesite vaše podatke za kreiranje porudzbine</h4>
+                    @csrf
+                    <div class="col-sm-6">
+                        <div class="col">
+                            <label for="name">Ime</label>
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Unesite vaše ime" required>
+                        </div>
+                        <div class="col">
+                            <label for="mail">Mejl</label>
+                            <input name="mail" type="text" class="form-control" id="mail" placeholder="Unesite vaš mejl" required>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center form-group col-sm-6">
+                        <button type="submit" class="btn btn-primary" class="">Naruči</button>
+                    </div>
+                </form>
+            </td>
+        </tr>
         </tbody>
     </table>
     @endif
