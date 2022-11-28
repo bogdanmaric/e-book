@@ -13,14 +13,16 @@ class BookPurchaseMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $emailData;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($emailData)
     {
-        //
+        $this->emailData = $emailData;
     }
 
     /**
@@ -31,7 +33,7 @@ class BookPurchaseMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Book Purchase Mail',
+            subject: $this->emailData["title"],
         );
     }
 
@@ -43,7 +45,12 @@ class BookPurchaseMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'pages.mail.purchase',
+            with: [
+                "title" => $this->emailData["title"],
+                "name" => $this->emailData["name"],
+                "books" => $this->emailData["books"]
+            ]
         );
     }
 
