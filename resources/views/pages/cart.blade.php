@@ -63,7 +63,7 @@
         <tr>
             <td colspan="3" class="justify-content-center">
                 <form id="buy-book-form" classs="d-flex" method="POST" action="{{route("purchaseBook")}}">
-                    <h4>Unesite vaše podatke za kreiranje porudzbine</h4>
+                    <h4>Unesite vaše podatke za kupovinu knjiga</h4>
                     @csrf
                     @method("POST")
                     <div class="col-sm-6">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center form-group col-sm-6">
-                        <button type="submit" class="btn btn-primary" class="">Naruči</button>
+                        <button type="submit" class="btn btn-primary" class="">Kupi</button>
                     </div>
                 </form>
             </td>
