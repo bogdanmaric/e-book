@@ -29,14 +29,20 @@
                     <pre class="book-author-publisher">{{$book->author}} - {{$book->publisher}}</pre>
                 </div>
                 <img class="card-img-top book-image" src="{{$book->image_link}}" alt="book-image" >
-                <form  class="mt-3" action="">
-                    <button href="#" class="btn btn-primary">
+                    @if(!Session::get("cart")->has($book->id))
+                        <form class="mt-3" action="{{route("addBookToCart", [$book->id])}}" method="post">
+                            @csrf
+                            @method("POST")
+                            <button class="btn btn-primary">
                                 <span>
                                 <img class="book-cart" src="{{asset("assets/images/cart-64.png")}}">
                                 </span>
-                        Dodaj u korpu
-                    </button>
-                </form>
+                                Dodaj u korpu
+                            </button>
+                        </form>
+                    @else
+                        <p class="mt-3">Knjiga se već nalazi u korpi</p>
+                    @endif
             </div>
             <div class="row justify-content-center mb-5">
                 <div class="card-body book-body col px-3">
