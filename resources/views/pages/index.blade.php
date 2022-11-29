@@ -35,6 +35,10 @@
                         <h5 class="card-title book-title">{{$book->title}}</h5>
                         <small class="card-category book-category">{{$book->category->name}}</small>
                         <hr>
+                        <div class="d-flex justify-content-center">
+                            <p class="book-author-publisher m-0">{{"Cena " . $book->price . " RSD"}} </p>
+                        </div>
+                        <hr>
                         @if(!Session::get("cart")->has($book->id))
                         <form action="{{route("addBookToCart", [$book->id])}}" method="post">
                             @csrf

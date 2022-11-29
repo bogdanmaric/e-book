@@ -50,6 +50,11 @@
                     <p class="card-text book-text">{{$book->description}}</p>
                     <small class="card-category book-category">{{$book->category->name}}</small>
                     <hr>
+                    <div class="d-flex justify-content-center">
+                        <p class="book-author-publisher m-0">{{"Cena " . $book->price . " RSD"}} </p>
+                    </div>
+                    <hr>
+                    <hr>
                 </div>
             </div>
         </div>
