@@ -29,7 +29,7 @@
                 <th scope="row" class="d-flex justify-content-center">
                     <div class="d-flex row align-items-center">
                         <div class="col">
-                            <img class="image-link" width="200" src="{{$book->image_link}}">
+                            <img class="image-link" width="200" src="{{$book->image_link}}" alt="book-image">
                         </div>
                         <div class="col d-flex flex-column">
                             <p>Naslov: {{$book->title}}</p>
