@@ -59,7 +59,7 @@ class CartController extends Controller
         }
 
         $details = [
-            "title" => "E-Book uspešna kupovina",
+            "title" => "Uspešna kupovina",
             "name" => $request["name"],
             "books" => $books
         ];
