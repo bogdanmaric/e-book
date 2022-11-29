@@ -8,7 +8,7 @@
     <title>ebook.herokuapp.com</title>
 </head>
 <body>
-    <h1>Poštovani {{$name}}</h1>
+    <h1>Poštovani/a {{$name}}</h1>
     <p>U prilogu vam šaljemo linkove knjiga koje ste kupili:</p>
     @foreach($books as $title => $book_link)
         <a href="{{$book_link}}">{{$title}}</a><br>
