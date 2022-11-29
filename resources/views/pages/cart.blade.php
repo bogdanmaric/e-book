@@ -26,8 +26,8 @@
         <tbody>
         @foreach($books as $book)
             <tr>
-                <th scope="row" class="d-flex justify-content-around">
-                    <div class="d-flex flex-row row">
+                <th scope="row" class="d-flex justify-content-center">
+                    <div class="d-flex row align-items-center">
                         <div class="col">
                             <img class="image-link" width="200" src="{{$book->image_link}}">
                         </div>
