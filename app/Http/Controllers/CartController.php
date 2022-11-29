@@ -28,7 +28,7 @@ class CartController extends Controller
     public function addBookToCart(Request $request, $id)
     {
         $request->session()->get("cart")->put($id, $id);
-        return redirect(RouteServiceProvider::HOME)->with("status", "Knjiga je uspešno dodata u korpu");
+        return redirect("/ebook")->with("status", "Knjiga je uspešno dodata u korpu");
     }
 
     /**
@@ -66,7 +66,7 @@ class CartController extends Controller
         Mail::to($request["email"])->send(new \App\Mail\BookPurchaseMail($details));
 
         $request->session()->forget("cart");
-        return redirect(RouteServiceProvider::HOME)->with(
+        return redirect("/ebook")->with(
             "status",
             "Kupovina je uspešno obavljena, na vaš imejl ćete dobiti linkove kupljenijh knjiga"
         );

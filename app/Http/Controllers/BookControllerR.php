@@ -58,7 +58,7 @@ class BookControllerR extends Controller
         $book->price = $request->price;
         $book->save();
 
-        return redirect(RouteServiceProvider::HOME)->with("Uspešno dodata knjiga u katalog radnje");
+        return redirect("/ebook")->with("status","Uspešno dodata knjiga u katalog prodavnice");
     }
 
     /**
@@ -111,7 +111,7 @@ class BookControllerR extends Controller
         $book->price = $request->price;
         $book->save();
 
-        return redirect(RouteServiceProvider::HOME)->with("Uspešno promenjene informacije o knjizi");
+        return redirect("/ebook")->with("status", "Uspešno promenjene informacije o knjizi");
     }
 
     /**
@@ -124,6 +124,6 @@ class BookControllerR extends Controller
     {
         $book = Book::find($id);
         $book->delete();
-        return redirect(RouteServiceProvider::HOME)->with("status", "Knjiga je uspešno obrisana iz kataloga");
+        return redirect("/ebook")->with("status", "Knjiga je uspešno obrisana iz kataloga");
     }
 }
