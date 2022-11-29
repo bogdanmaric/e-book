@@ -99,7 +99,11 @@ class BookControllerR extends Controller
         $book = Book::find($id);
         $book->title = $request->title;
         $book->description = $request->description;
-        $book->image_link = $request->image_link;
+        $book->image_link = (
+        ImageUrlValidation::imageUrlValidation($request->image_link))
+            ? $request->image_link
+            : asset("assets/images/image_not_available.png"
+            );
         $book->book_link = $request->book_link;
         $book->author = $request->author;
         $book->publisher = $request->publisher;
