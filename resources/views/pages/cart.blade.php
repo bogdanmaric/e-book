@@ -74,6 +74,7 @@
                         <div class="col">
                             <label for="email">Imejl</label>
                             <input name="email" type="text" class="form-control" id="email" placeholder="Unesite vaš imejl" required>
+                            <small id="process-info">*Proces kupovine može potrajati malo duže</small>
                             <hr>
                         </div>
                     </div>
