@@ -14,7 +14,8 @@ class CartController extends Controller
     {
         $booksInCartIdArray = session()->get("cart");
         $books = Book::findMany($booksInCartIdArray);
-        return view("pages.cart", compact("books"));
+        $total_price = $books->sum("price");
+        return view("pages.cart", compact("books", "total_price"));
     }
 
     /**
