@@ -21,5 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         (new UserSeeder())->run();
+        (new CategorySeeder())->run();
+        (new BookSeeder())->run();
     }
 }
