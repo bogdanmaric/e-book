@@ -29,3 +29,4 @@
         @endif
     </div>
 </nav>
+<x-auth-session-status class="text-center alert alert-primary" role="alert" :status="session('status')" />
