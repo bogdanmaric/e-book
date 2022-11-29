@@ -57,7 +57,7 @@ class CartController extends Controller
         }
 
         $details = [
-            "title" => "Realizovana kupovina na E-Book vebsajtu",
+            "title" => "E-Book uspešna kupovina",
             "name" => $request["name"],
             "books" => $books
         ];
