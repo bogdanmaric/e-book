@@ -53,7 +53,8 @@ class CartController extends Controller
     {
         $books = [];
         foreach ($request->session()->get("cart")->all() as $id) {
-            $books[] = Book::find($id)->book_link;
+            $book = Book::find($id);
+            $books[$book->title] = $book->book_link;
         }
 
         $details = [
