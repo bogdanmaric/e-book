@@ -10,8 +10,8 @@
 <body>
     <h1>Poštovani {{$name}}</h1>
     <p>U prilogu vam šaljemo linkove knjige koje ste kupili:</p>
-    @foreach($books as $book)
-        <a href="{{$book}}">{{$book}}</a><br>
+    @foreach($books as $title => $book_link)
+        <a href="{{$book_link}}">{{$title}}</a><br>
     @endforeach
     <p>Hvala vam na vašem poverenju</p>
 </body>
