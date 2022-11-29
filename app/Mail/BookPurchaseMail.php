@@ -47,7 +47,6 @@ class BookPurchaseMail extends Mailable
         return new Content(
             view: 'pages.mail.purchase',
             with: [
-                "title" => $this->emailData["title"],
                 "name" => $this->emailData["name"],
                 "books" => $this->emailData["books"]
             ]
