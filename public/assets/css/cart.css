@@ -33,3 +33,13 @@
     align-items: center;
     padding: 1rem;
 }
+
+#total-price-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#total-price-number {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -51,6 +51,16 @@
             </tr>
         @endforeach
         <tr>
+            <td class="text-center align-middle" id="total-price-text">Ukupna cena svih knjiga</td>
+            <td colspan="3">
+                <hr>
+                <div class="d-flex justify-content-center">
+                    <p class="book-author-publisher m-0" id="total-price-number">{{$total_price . " RSD"}} </p>
+                </div>
+                <hr>
+            </td>
+        </tr>
+        <tr>
             <td colspan="3" class="justify-content-center">
                 <form id="buy-book-form" classs="d-flex" method="POST" action="{{route("purchaseBook")}}">
                     <h4>Unesite vaše podatke za kreiranje porudzbine</h4>
