@@ -21,7 +21,7 @@ class BookSeeder extends Seeder
             [
                 "title" => "Pustolovina meduze",
                 "description" => "Knjiga koja vas uvodi u pustolovine jedne meduze,
-                čiji je san da istraži atlanski okean kako otkrila njene misterije",
+                čiji je san da istraži atlanski okean kako otkrila njene tajne",
                 "author" => "Milovan",
                 "publisher" => "FantazijaMora",
                 "image_link" => "https://cdn.pixabay.com/photo/2020/07/25/16/31/jellyfish-5437207_960_720.png",
