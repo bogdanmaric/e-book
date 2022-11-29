@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements("id");
             $table->string("title", 50);
-            $table->string("description", 200);
+            $table->text("description");
             $table->string("author", 30);
             $table->string("publisher", 40);
             $table->string("image_link", 255);
