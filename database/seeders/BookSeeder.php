@@ -19,7 +19,7 @@ class BookSeeder extends Seeder
         Book::create
         (
             [
-                "title" => "Pustolovina meduze",
+                "title" => "Pustolovine meduze",
                 "description" => "Knjiga koja vas uvodi u pustolovine jedne meduze,
                 čiji je san da istraži atlanski okean kako bi otkrila njene tajne",
                 "author" => "Milovan",
