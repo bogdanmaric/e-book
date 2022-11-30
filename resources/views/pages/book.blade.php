@@ -1,6 +1,6 @@
 @extends("pages.layouts.layout")
 
-@section("title", "E-book")
+@section("title", "{$book->title}")
 
 @section("style")
     <link rel="stylesheet" href="{{asset("assets/css/book.css")}}">

@@ -1,6 +1,6 @@
 @extends("pages.layouts.layout")
 
-@section("title", "E-book")
+@section("title", "Upravljanje kategorijama")
 
 @section("style")
     <link rel="stylesheet" href="{{asset("assets/css/category-management.css")}}">

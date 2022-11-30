@@ -1,6 +1,6 @@
 @extends("pages.layouts.layout")
 
-@section("title", "E-book")
+@section("title", "Korpa")
 
 @section("style")
     <link rel="stylesheet" href="{{asset("assets/css/cart.css")}}">
